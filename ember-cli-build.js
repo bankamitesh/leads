@@ -10,7 +10,7 @@ module.exports = function(defaults) {
       'importBootstrapCSS': true
     }
   });
-  app.import("vendor/js/modal.js");
+  app.import("vendor/modal.js");
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
