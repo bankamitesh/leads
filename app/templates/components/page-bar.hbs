@@ -1,0 +1,17 @@
+<div class="col-md-12">
+  <div class="pull-right" style="margin-left:20px">
+    <span> {{recordsStart}} - {{recordsEnd}} </span>
+    <div class="inline-block" style="margin-left:20px">
+      <span style="margin-left:20px">{{fa-icon "angle-double-left" action='gotoFirstPage' class="pointer"}}</span>
+      <span style="margin-left:20px">{{fa-icon "angle-left" action='gotoPrevPage' class="pointer"}}</span>
+      <span style="margin-left:20px">{{fa-icon "angle-right" action='gotoNextPage' class="pointer"}}</span>
+      <span style="margin-left:20px">{{fa-icon "angle-double-right" action='gotoLastPage' class="pointer"}}</span>
+    </div>
+  </div>
+  <form class="form-inline pull-right">
+    <div class="form-group">
+      <span>Items per page: </span>
+      {{select content=PER_PAGES selectedValue=pageContext.per_page on-change='updatePerPage' class="pageBar inline-block"}}
+    </div>
+  </form>
+</div>

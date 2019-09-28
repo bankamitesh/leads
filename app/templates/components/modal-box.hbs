@@ -1,0 +1,23 @@
+<div class="modal fade nu-modal" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog {{if fullScreen 'material-container'}} {{if wideModal 'widemodal'}} {{if narrowModal 'narrowModal'}} {{if topMargin 'topMargin'}}">
+    <div class="modal-content">
+      {{#if isHeaderReq}}
+      <div class="modal-header">
+        {{#if headerCloseReq}}
+        <button type="button" class="close" {{action 'closeModal'}}>&times;</button>
+        {{/if}}
+        <div class="row">
+          <div class="col-md-7">
+            <h4 class="modal-title" id="newEditCrsLabel">{{{label}}} {{#if titleAppend}}- {{titleAppend}}{{/if}}</h4>
+          </div>
+          <div class="col-md-5">
+            {{elabel}}
+          </div>
+        </div>
+
+      </div>
+      {{/if}}
+        {{yield}}
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+@import "bootstrap";
+.page-heading{
+    padding: 10px 0;
+    background-color: #fff;
+}
+.inline-block{
+    display:inline-block !important;
+}
+.text-light{
+    color:#D3D3D3;
+}
+.hover-icon.text-light:hover{
+    color:#999;
+}
+.pointer{
+    cursor: pointer;
+}
+.pageBar select{
+    height: 25px;
+    margin: 0 10px;
+}

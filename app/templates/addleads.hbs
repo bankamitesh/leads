@@ -1,0 +1,23 @@
+{{#modal-box label=label closeModal='closeModal'}}
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label class="col-md-3 control-label ast">Quantity</label>
+    <div class="col-md-6">
+      {{input name="quantity" type="number" class="form-control" value=quantity placeholder="Quantity"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 control-label ast">Notes</label>
+    <div class="col-md-6">
+      {{textarea value=remarks class="form-control" rows="2"}}
+    </div>
+  </div>
+
+  <div class="form-group action-btns">
+    <div class="col-sm-offset-3 col-md-6">
+      <button type="submit" class="btn btn-primary" {{action 'saveItemTransaction'}}>Save</button>
+      <button type="submit" class="btn btn-default" {{action 'closeModal'}}>Cancel</button>
+    </div>
+  </div>
+</form>
+{{/modal-box}}

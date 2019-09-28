@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="page-heading row">
+        <div class='col-md-6'>
+            <button class="btn btn-dark" {{action "addLeads"}}>Add Lead</button>
+        </div>
+        <div class="col-md-6">
+            <div class="btn-toolbar" >
+                {{input value=search type="text" class="form-control" insert-newline="applyFilters" placeholder="Search Lead"}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-bordered" id="bankList">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Location type</th>
+                <th>Location String</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each leads as |lead|}}
+                {{lead-item lead=lead}}
+            {{/each}}
+        </tbody>
+    </table>
+    {{page-bar pageContext=pageContext class="row" gotoPageBar='gotoPageBar'}}    
+    <br><br><br><br><br><br>
+</div>
