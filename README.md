@@ -18,6 +18,11 @@ You will need the following things properly installed on your computer.
 * `cd codejudge`
 * `npm install`
 
+## Backend
+
+Run the below command to start the backend at http://localhost:8080
+docker run -p 8080:8080 codejudge0/leadsapi
+
 ## Running / Development
 
 * `ember serve`
