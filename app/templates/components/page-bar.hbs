@@ -1,11 +1,11 @@
 <div class="col-md-12">
   <div class="pull-right" style="margin-left:20px">
-    <span> {{recordsStart}} - {{recordsEnd}} </span>
+    <span> {{recordsStart}} - {{recordsEnd}} of {{pageContext.total_rows}} </span>
     <div class="inline-block" style="margin-left:20px">
-      <span style="margin-left:20px">{{fa-icon "angle-double-left" action='gotoFirstPage' class="pointer"}}</span>
-      <span style="margin-left:20px">{{fa-icon "angle-left" action='gotoPrevPage' class="pointer"}}</span>
-      <span style="margin-left:20px">{{fa-icon "angle-right" action='gotoNextPage' class="pointer"}}</span>
-      <span style="margin-left:20px">{{fa-icon "angle-double-right" action='gotoLastPage' class="pointer"}}</span>
+      <span style="margin-left:20px" {{action 'gotoFirstPage'}}>{{fa-icon "angle-double-left" class="pointer"}}</span>
+      <span style="margin-left:20px" {{action 'gotoPrevPage'}}>{{fa-icon "angle-left" class="pointer"}}</span>
+      <span style="margin-left:20px" {{action 'gotoNextPage'}}>{{fa-icon "angle-right" class="pointer"}}</span>
+      <span style="margin-left:20px" {{action 'gotoLastPage'}}>{{fa-icon "angle-double-right" class="pointer"}}</span>
     </div>
   </div>
   <form class="form-inline pull-right">

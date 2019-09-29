@@ -1,0 +1,7 @@
+{{#if errorMessages}}
+<div class='alert alert-danger'>
+    {{#each errorMessages as |errorMessage|}}
+        <li>{{errorMessage}}</li>
+    {{/each}}
+</div>
+{{/if}}

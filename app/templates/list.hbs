@@ -1,3 +1,4 @@
+<div class={{messageClass}} id="request-message">{{requestMessage}}</div>
 <div class="container">
     <div class="page-heading row">
         <div class='col-md-6'>
@@ -24,7 +25,7 @@
         </thead>
         <tbody>
             {{#each leads as |lead|}}
-                {{lead-item lead=lead}}
+                {{lead-item lead=lead delete='delete' update='update'}}
             {{/each}}
         </tbody>
     </table>

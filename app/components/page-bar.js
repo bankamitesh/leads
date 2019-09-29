@@ -1,5 +1,7 @@
 export default Em.Component.extend({
   PER_PAGES:[
+    {id:2,name:"2"},
+    {id:5,name:"5"},
     {id:10,name:"10"},
     {id:25,name:"25"},
     {id:50,name:"50"},
@@ -12,7 +14,7 @@ export default Em.Component.extend({
   recordsEnd: function(){
     var end = this.get('recordsStart') + Number(this.get('pageContext.per_page'));
     var tRows = this.get('pageContext.total_rows');
-    return end < tRows ? (end-1) : tRows;
+    return end <= tRows ? (end-1) : tRows;
   }.property('recordsStart','pageContext.per_page'),
   isFirstPage: function(){
     return Number(this.get('pageContext.page')) === 1;
@@ -42,9 +44,10 @@ export default Em.Component.extend({
     },
     gotoLastPage(){
       if(!this.get('isLastPage')){
-        var pg = Number(this.get('pageContext.page'));
         var pp = Number(this.get('pageContext.per_page'));
-        this.sendAction('gotoPageBar', this.get('recordsEnd'), pp);
+        var pg = parseInt(this.get('pageContext.total_rows')/pp);
+        pg = this.get('pageContext.total_rows')%pp == 0? pg : pg+1
+        this.sendAction('gotoPageBar', pg, pp);
       }
     },
     updatePerPage(){

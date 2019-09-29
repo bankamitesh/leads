@@ -3,4 +3,7 @@
 <td>{{lead.mobile}}</td>
 <td>{{lead.location_type}}</td>
 <td>{{lead.location_string}}</td>
-<td></td>
+<td>
+    <span style="margin-left:20px" id="delete" {{action 'update'}}>{{fa-icon "edit" class="pointer"}}</span>
+    <span style="margin-left:20px" id="delete" {{action 'delete'}}>{{fa-icon "trash" class="pointer"}}</span>
+</td>

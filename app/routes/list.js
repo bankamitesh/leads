@@ -4,10 +4,6 @@ export default Ember.Route.extend({
       var self = this;
       return jQuery.ajax(params).then(function(json){
           return json;
-      }, function(err, textStatus){
-          $('.scrollable').scrollTop(0);
-          $('.modal').scrollTop(0);
-          return self.prepareErrResp(err, textStatus, params);
       });
   },
   model(params) {

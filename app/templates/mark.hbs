@@ -1,0 +1,27 @@
+{{#modal-dialog label=label closeModal='closeModal'}}
+<div class="modal-content">
+  <div class="modal-header">
+    {{label}}
+    <button type="button" class="close" {{action 'closeModal'}}>&times;</button>
+  </div>
+  <div style="padding:10px">
+    {{partial 'formerrors'}}
+    <form class="form-horizontal" role="form">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="control-label ast">Communication</label>
+            <div>
+              {{textarea name="mark_communication" type="text" class="form-control" value=communication placeholder="Communication"}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group action-btns text-center">
+        <button type="submit" class="btn btn-primary" {{action 'closeModal'}}>Close</button>
+        <button type="submit" id="mark" class="btn btn-dark" {{action 'markCommunication'}}>Mark Communication</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{/modal-dialog}}

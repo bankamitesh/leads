@@ -1,0 +1,19 @@
+{{#modal-dialog label='Confirm Delete' closeModal='closeModal'}}
+  <div class="modal-content">
+    <div class="modal-header">
+      Delete lead
+      <button type="button" class="close" {{action 'closeModal'}}>&times;</button>
+    </div>
+    <div style="padding:10px">
+      <div>{{fa-icon "warning"}} {{message}}</div>
+      <div style="margin-top:10px">
+        <button type="submit" class="btn btn-dark" {{action 'confirmed' }}>
+          Ok
+        </button>
+        <button type="submit" class="btn btn-primary" {{action 'closeModal' }}>
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+{{/modal-dialog}}
