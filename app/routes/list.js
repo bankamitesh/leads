@@ -34,8 +34,6 @@ export default Ember.Route.extend({
         this.get('controller').send('applyPagination');
     },
     closeModal: function () {
-      $('.modal').modal('hide');
-      $('.modal-backdrop').remove();
       this.send('discon');
     },
     discon: function () {
@@ -50,7 +48,6 @@ export default Ember.Route.extend({
             outlet: 'modal',
             controller: get(options, 'cont')
         });
-        $('.modal.nu-modal').modal('show');
     }
   }
 });

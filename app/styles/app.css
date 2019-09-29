@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "ember-modal-dialog/ember-modal-structure.css";
+@import "ember-modal-dialog/ember-modal-appearance.css";
 .page-heading{
     padding: 10px 0;
     background-color: #fff;
@@ -18,4 +20,17 @@
 .pageBar select{
     height: 25px;
     margin: 0 10px;
+}
+.modal-content{
+    border: none;
+    width: 50vw;
+}
+.modal-header{
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: #fff;
+}
+.ember-modal-dialog {
+    padding:0;
 }
